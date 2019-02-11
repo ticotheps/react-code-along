@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+    <body>
+        <div id="root"> <!-- React will inject our application here --> </div>
+
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> <!-- This brings in the ReactDOM (virtual DOM)-->
+        <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+        <script type="text/babel">
+            // const createElement = (type, className, strContent) => {
+            //     const customElement = document.createElement(type);
+            //     const content = document.createTextNode(strContent);
+
+            //     customElement.append(content);
+            //     customElement.classList.add(className);
+
+            //     return customElement;
+            // }
+
+            const rooDiv = document.getElementById("root");
+            const header = React.createElement("h1", { className: "header" }, "Hello world!");
+            // document.body.insertBefore(header, rootDiv);
+
+            console.log(header);
+            ReactDom.render("header", "root");
+        </script>
+    </body>
+</html>
